@@ -203,13 +203,11 @@
 				
 				document.addEventListener('mousedown', onDocumentMouseDown, true);
 				var a = 0;
-				while (moon != undefined){
-					render();
-					console.log("Moon is defined");
-				}else{
-					console.log("Moon is undefined");
+				while (moon == undefined){
 					Moon();
+					console.log("Moon is undefined");
 				}
+				render();
 				
 			}
 			
