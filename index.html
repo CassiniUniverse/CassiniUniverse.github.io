@@ -4,17 +4,17 @@
 	<meta charset="utf-8">
 	<title>Saules sistema</title>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/99/three.js"></script>
-    <script type="text/javascript" src="../libs/jquery-1.9.js"></script>
-    <script type="text/javascript" src="../libs/stats.js"></script>
-	<script type="text/javascript" src="../libs/TrackballControls.js"></script>
+    <script type="text/javascript" src="../jquery-1.9.js"></script>
+    <script type="text/javascript" src="../stats.js"></script>
+	<script type="text/javascript" src="../TrackballControls.js"></script>
 	
-    <script type="text/javascript" src="../libs/dat.gui.js"></script>
-	<script type="text/javascript" src="../libs/MTLLoader.js"></script>
-	<script type="text/javascript" src="../libs/ObjLoader.js"></script>
-	<script type="text/javascript" src="../libs/DDSLoader.js"></script>
-	<script type="text/javascript" src="../libs/inflate.min.js"></script>
-	<script type="text/javascript" src="../libs/FBXLoader.js"></script>
-	<script src="../libs/stats.min.js"></script>
+    <script type="text/javascript" src="../dat.gui.js"></script>
+	<script type="text/javascript" src="../MTLLoader.js"></script>
+	<script type="text/javascript" src="../ObjLoader.js"></script>
+	<script type="text/javascript" src="../DDSLoader.js"></script>
+	<script type="text/javascript" src="../inflate.min.js"></script>
+	<script type="text/javascript" src="../FBXLoader.js"></script>
+	<script src="../stats.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 	<style>
 </style>
@@ -358,13 +358,13 @@
 					THREE.Loader.Handlers.add( /\.dds$/i, new THREE.DDSLoader() );
 
 					new THREE.MTLLoader()
-						.setPath( '../libs/satellite/' )
+						.setPath( '../satellite/' )
 						.load( 'TIE-fighter.mtl', function ( materials ) {
 							materials.preload();
 
 							new THREE.OBJLoader()
 								.setMaterials( materials )
-								.setPath( '../libs/satellite/' )
+								.setPath( '../satellite/' )
 								.load( 'TIE-fighter.obj', function ( object ) {
 									//object.position.z =  200;
 									object.scale.x = 0.1;
@@ -401,13 +401,13 @@
 					THREE.Loader.Handlers.add( /\.dds$/i, new THREE.DDSLoader() );
 
 					new THREE.MTLLoader()
-						.setPath( '../libs/satellite/Customer Only Download/' )
+						.setPath( '../satellite/Customer Only Download/' )
 						.load( 'Satellite.mtl', function ( materials ) {
 							materials.preload();
 
 							new THREE.OBJLoader()
 								.setMaterials( materials )
-								.setPath( '../libs/satellite/' )
+								.setPath( '../satellite/' )
 								.load( 'Satellite.obj', function ( object ) {
 									//object.position.z =  200;
 									object.scale.x = 5;
@@ -445,13 +445,13 @@
 				THREE.Loader.Handlers.add( /\.dds$/i, new THREE.DDSLoader() );
 				
 				new THREE.MTLLoader()
-					.setPath( '../libs/asteroids/zeme/earth/' )
+					.setPath( '../asteroids/zeme/earth/' )
 					.load( 'earth.mtl', function ( materials ) {
 						materials.preload();
 
 						new THREE.OBJLoader()
 							.setMaterials( materials )
-							.setPath( '../libs/asteroids/zeme/earth/' )
+							.setPath( '../asteroids/zeme/earth/' )
 							.load( 'earth.obj', function ( object ) {
 							var objBbox = new THREE.Box3().setFromObject(object);
 
@@ -502,7 +502,7 @@
 
 				THREE.Loader.Handlers.add( /\.dds$/i, new THREE.DDSLoader() );
 				var loaderFBX = new THREE.FBXLoader();
-				loaderFBX.load( '../libs/asteroids/aster.fbx', function ( object ) {
+				loaderFBX.load( '../asteroids/aster.fbx', function ( object ) {
 					object.mixer = new THREE.AnimationMixer( object );
 					var lala = mixers.push( object.mixer );
 					var action = object.mixer.clipAction( object.animations[ 0 ] );
@@ -548,14 +548,13 @@
 
 					THREE.Loader.Handlers.add( /\.dds$/i, new THREE.DDSLoader() );
 					new THREE.MTLLoader()
-						.setPath( '../libs/' )
+						
 						.load( 'sun.mtl', function ( materials ) {
 							materials.preload();
 							new THREE.OBJLoader()
 								.setMaterials( materials )
-								.setPath( '../libs/' )
 								.load( 'sun.obj', function ( object ) {
-								var texture = new THREE.TextureLoader().load('../libs/2k_sun.jpg/');
+								var texture = new THREE.TextureLoader().load('../2k_sun.jpg/');
 								object.traverse(function (child) {   // aka setTexture
                 if (child instanceof THREE.Mesh) {
                     child.material.map = texture;
@@ -652,7 +651,7 @@
 					THREE.Loader.Handlers.add( /\.dds$/i, new THREE.DDSLoader() );
 
 					new THREE.MTLLoader()
-						.setPath( '../libs/asteroids/moon/lrgrlijrfhmo-Moon3DModel(1)/Moon_3D_Model/' )
+						.setPath( '../asteroids/moon/lrgrlijrfhmo-Moon3DModel(1)/Moon_3D_Model/' )
 						.load( 'moon.mtl', function ( materials ) {
 							materials.preload();
 
