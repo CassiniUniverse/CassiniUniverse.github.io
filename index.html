@@ -553,12 +553,6 @@
 								.setMaterials( materials )
 								.setPath( '../' )
 								.load( 'sun.obj', function ( object ) {
-								var texture = new THREE.TextureLoader().load('../2k_sun.jpg/');
-								object.traverse(function (child) {   // aka setTexture
-                if (child instanceof THREE.Mesh) {
-                    child.material.map = texture;
-                }
-            });
 									object.position.z =  0;
 									object.position.y =  -4000;
 									//object.position.x =  -100;
