@@ -546,13 +546,11 @@
 
 					THREE.Loader.Handlers.add( /\.dds$/i, new THREE.DDSLoader() );
 					new THREE.MTLLoader()
-						.setPath( '../' )
-						.load( 'sun.mtl', function ( materials ) {
+						.load( '../sun.mtl', function ( materials ) {
 							materials.preload();
 							new THREE.OBJLoader()
 								.setMaterials( materials )
-								.setPath( '../' )
-								.load( 'sun.obj', function ( object ) {
+								.load( '../sun.obj', function ( object ) {
 									object.position.z =  0;
 									object.position.y =  -4000;
 									//object.position.x =  -100;
