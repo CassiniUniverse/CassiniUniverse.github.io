@@ -79,11 +79,11 @@
 			
 			var spotLight = new THREE.SpotLight( 0xffffff, 100 );
 			
-			//window.onload = function() {
+			window.onload = function() {
 			init();
 			animate();
 			document.addEventListener('mousedown', onDocumentMouseDown, false);
-			//}
+			}
 			
 			function ComeBack(){
 			if (camera.position.z < 98700){
@@ -162,24 +162,6 @@
 				
 				/**/
 				
-				renderer = new THREE.WebGLRenderer({
-					antialias: false,
-					alpha: true
-				});
-				renderer.setPixelRatio( window.devicePixelRatio );
-				renderer.setSize( window.innerWidth, window.innerHeight );
-				//renderer.setClearColor(0xEEEEEE, 1.0);
-				renderer.physicallyCorrectLights = true;
-				
-
-				$("#WebGL-output").append(renderer.domElement);
-				container.appendChild( renderer.domElement );
-				
-				controls = new THREE.TrackballControls( camera, renderer.domElement );     
-				
-				stats = new Stats();
-				container.appendChild( stats.dom );
-				
 				window.addEventListener( 'resize', onWindowResize, false );
 				
 				pivotK = new THREE.Object3D();
@@ -202,6 +184,24 @@
 				Tracking();
 				
 				document.addEventListener('mousedown', onDocumentMouseDown, true);
+				
+				renderer = new THREE.WebGLRenderer({
+					antialias: false,
+					alpha: true
+				});
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				//renderer.setClearColor(0xEEEEEE, 1.0);
+				renderer.physicallyCorrectLights = true;
+				
+
+				$("#WebGL-output").append(renderer.domElement);
+				container.appendChild( renderer.domElement );
+				
+				controls = new THREE.TrackballControls( camera, renderer.domElement );     
+				
+				stats = new Stats();
+				container.appendChild( stats.dom );
 				
 				render();
 				
