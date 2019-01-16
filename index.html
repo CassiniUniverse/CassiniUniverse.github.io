@@ -160,7 +160,23 @@
 				light1.position.z = 8000;
 				scene.add( light1 );*/
 				
-				/**/
+				renderer = new THREE.WebGLRenderer({
+					antialias: false,
+					alpha: true
+				});
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				//renderer.setClearColor(0xEEEEEE, 1.0);
+				renderer.physicallyCorrectLights = true;
+				
+
+				$("#WebGL-output").append(renderer.domElement);
+				container.appendChild( renderer.domElement );
+				
+				controls = new THREE.TrackballControls( camera, renderer.domElement );     
+				
+				stats = new Stats();
+				container.appendChild( stats.dom );
 				
 				window.addEventListener( 'resize', onWindowResize, false );
 				
@@ -184,24 +200,6 @@
 				Tracking();
 				
 				document.addEventListener('mousedown', onDocumentMouseDown, true);
-				
-				renderer = new THREE.WebGLRenderer({
-					antialias: false,
-					alpha: true
-				});
-				renderer.setPixelRatio( window.devicePixelRatio );
-				renderer.setSize( window.innerWidth, window.innerHeight );
-				//renderer.setClearColor(0xEEEEEE, 1.0);
-				renderer.physicallyCorrectLights = true;
-				
-
-				$("#WebGL-output").append(renderer.domElement);
-				container.appendChild( renderer.domElement );
-				
-				controls = new THREE.TrackballControls( camera, renderer.domElement );     
-				
-				stats = new Stats();
-				container.appendChild( stats.dom );
 				
 				render();
 				
