@@ -655,7 +655,7 @@
 
 							new THREE.OBJLoader()
 								.setMaterials( materials )
-								.setPath( '../libs/asteroids/moon/lrgrlijrfhmo-Moon3DModel(1)/Moon_3D_Model/' )
+								.setPath( '../asteroids/moon/lrgrlijrfhmo-Moon3DModel(1)/Moon_3D_Model/' )
 								.load( 'moon.obj', function ( object ) {
 									//object.position.z =  200;
 									object.scale.x = 1;
@@ -677,7 +677,7 @@
 			
 			function Sphere(){
 				var loader = new THREE.TextureLoader();
-				loader.load( '../libs/earth-animation-webgl/ESO_-_Milky_Way.jpg', function ( texture ) {
+				loader.load( '../earth-animation-webgl/ESO_-_Milky_Way.jpg', function ( texture ) {
 
 					var geometry = new THREE.SphereGeometry( 500000, 200, 200 );
 
