@@ -79,11 +79,11 @@
 			
 			var spotLight = new THREE.SpotLight( 0xffffff, 100 );
 			
-			window.onload = function() {
+			//window.onload = function() {
 			init();
 			animate();
 			document.addEventListener('mousedown', onDocumentMouseDown, false);
-			}
+			//}
 			
 			function ComeBack(){
 			if (camera.position.z < 98700){
@@ -202,11 +202,7 @@
 				Tracking();
 				
 				document.addEventListener('mousedown', onDocumentMouseDown, true);
-				var a = 0;
-				while (moon == undefined){
-					Moon();
-					console.log("Moon is undefined");
-				}
+				
 				render();
 				
 			}
