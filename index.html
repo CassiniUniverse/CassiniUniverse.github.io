@@ -826,9 +826,13 @@
 					}
 					if(movieEr == 1){
 						movie = 0;
+						zymeklis = 0;
 						if(scene.getObjectByName('pivotKZ')){
 							scene.remove(pivotKZ);
 							console.log("remove earth camera");
+							zymeklis = 1;
+							console.log("camera: "+camera.position.z);
+							console.log("eros: "+eros.position.z);
 						}
 						camera.position.x = eros.position.x;
 						camera.position.y = earth.position.y;
