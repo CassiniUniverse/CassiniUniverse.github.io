@@ -826,6 +826,10 @@
 					}
 					if(movieEr == 1){
 						movie = 0;
+						if(scene.getObjectByName('pivotKZ')){
+							scene.remove(pivotKZ);
+							console.log("remove earth camera");
+						}
 						camera.position.x = eros.position.x;
 						camera.position.y = earth.position.y;
 						if (camera.position.z > eros.position.z +20 && er == 0){
