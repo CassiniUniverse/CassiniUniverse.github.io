@@ -814,11 +814,13 @@
 							distanceTE.position.z = eros.position.z;
 							//console.log("1");
 							}
-							/*else {
+							else {
 							distanceTE.material.opacity = 0;
 							distanceTE.material.transparent = true;
 							camera.position.z = eros.position.z +30;
-							if(pivotKampas == 360 || pivotKampas > 360) {
+							camera.position.x = eros.position.x;
+							camera.position.y = eros.position.y;
+							/*if(pivotKampas == 360 || pivotKampas > 360) {
 								pivotKampas = 0;
 							} else {
 								pivotKampas += 0.05998;//0.0599
@@ -828,15 +830,15 @@
 							if(Math.cos(pivotKampas) > 0 || Math.cos(pivotKampas) == 0)
 								camera.up.set( 0, 1, 0 );
 							pivotK.position.x = 500*Math.cos(pivotKampas);
-							pivotK.position.y = 500*Math.sin(pivotKampas);
-							console.log("Movie "+movie);
-							console.log("MovieEr "+movieEr);*/
+							pivotK.position.y = 500*Math.sin(pivotKampas);*/
+							//console.log("Movie "+movie);
+							//console.log("MovieEr "+movieEr);*/
 							//console.log("X "+pivotK.position.x+" Y "+pivotK.position.y);
 							//console.log("Z "+camera.position.z);
 							//camera.lookAt( pivotK.position );
 							//console.log("x " +pivotK.position.x+" y "+pivotK.position.y+ " z "+ pivotK.position.z);
 							//er = 1;
-							//}
+							}
 						camera.lookAt( camera.position );
 					}
 					
