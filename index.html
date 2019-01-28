@@ -801,6 +801,7 @@
 				}
 
 					if(movie == 1){
+						movieEr == 0
 						camera.position.x = earth.position.x;
 						camera.position.y = earth.position.y;
 						if (camera.position.z > earth.position.z + 550){
@@ -852,7 +853,7 @@
 						transparentE2.material.opacity = 0;
 						transparentE1.material.transparent = true;
 						transparentE2.material.transparent = true;*/
-						if (camera.position.z > eros.position.z +200 && er == 0){
+						if (camera.position.z > eros.position.z +150 && er == 0){
 							
 				if(!scene.getObjectByName('pivotK')){
 					scene.add(pivotKZ);
@@ -870,7 +871,7 @@
 							else {
 							distanceTE.material.opacity = 0;
 							distanceTE.material.transparent = true;
-							camera.position.z = eros.position.z +150;
+							camera.position.z = eros.position.z +100;
 							camera.position.x = eros.position.x;
 							camera.position.y = eros.position.y;
 							if(atvir == 0 || atvir < 0) {
