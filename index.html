@@ -836,11 +836,11 @@
 									console.log("remove egde camera");
 
 								}
-								if(scene.getObjectByName('txt2')){
+								/*if(scene.getObjectByName('txt2')){
 									scene.remove(txt2);
 									console.log("remove txt2 camera");
 
-								}
+								}*/
 							distanceT.material.opacity = 0;
 							distanceT.material.transparent = true;
 							camera.position.z = earth.position.z +500;
@@ -892,6 +892,16 @@
 							//console.log("1");
 							}
 							else {
+								if(scene.getObjectByName('edge2')){
+									scene.remove(edge2);
+									console.log("remove egde camera");
+
+								}
+								if(scene.getObjectByName('txt1')){
+									scene.remove(txt1);
+									console.log("remove txt1 camera");
+
+								}
 							distanceTE.material.opacity = 0;
 							distanceTE.material.transparent = true;
 							camera.position.z = eros.position.z +1;
