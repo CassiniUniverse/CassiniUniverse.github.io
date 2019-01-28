@@ -726,6 +726,13 @@
 				stats.update();
 				requestAnimationFrame(render);
 				camera.up.set(0, 1, 0);
+				if(!scene.getObjectByName('edge')){
+					scene.add(egde);
+
+					}
+				if(!scene.getObjectByName('txt2')){
+					scene.add(txt2);
+								}
 				if((kampas == 359 || kampas > 359))
 					kampas = 0;
 				if((cameraKampas == 359 || cameraKampas > 359))
@@ -831,12 +838,12 @@
 									console.log("add earth camera");
 
 								}*/
-							if(!scene.getObjectByName('edge')){
+							if(scene.getObjectByName('edge')){
 									scene.remove(egde);
 									console.log("remove egde camera");
 
 								}
-								if(!scene.getObjectByName('txt2')){
+								if(scene.getObjectByName('txt2')){
 									scene.remove(txt2);
 									console.log("remove txt2 camera");
 
