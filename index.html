@@ -257,8 +257,8 @@
 				var eMaterial = new THREE.LineBasicMaterial( { color: 0x00ff000, linewidth: 5000 } );//4
 				transparentE1 = new THREE.Mesh( geometry , eMaterial );
 				//transparentE.visible = false;
-				transparentE1.material.opacity = 100;
-				transparentE1.material.transparent = true;
+				//transparentE1.material.opacity = 100;
+				//transparentE1.material.transparent = true;
 				edges = new THREE.LineSegments( eGeometry , transparentE1 );
 				scene.add( edges );
 				//////////
@@ -288,8 +288,8 @@
 				var eMaterial2 = new THREE.LineBasicMaterial( { color: 0xC0C0C0, linewidth: 5000 } );
 				transparentE2 = new THREE.Mesh( geometryE , eMaterial2 );
 				//transparentE.visible = false;
-				transparentE2.material.opacity = 100;
-				transparentE2.material.transparent = true;
+				//transparentE2.material.opacity = 100;
+				//transparentE2.material.transparent = true;
 				edges2 = new THREE.LineSegments( eGeometry2 , transparentE2 );
 				scene.add( edges2 );
 				
@@ -821,6 +821,8 @@
 						eros.rotateZ(-2*Math.PI/180);
 						transparentE1.material.opacity = 0;
 						transparentE2.material.opacity = 0;
+						transparentE1.material.transparent = true;
+						transparentE2.material.transparent = true;
 						if (camera.position.z > eros.position.z +250 && er == 0){
 							camera.position.z -= 100;
 							distanceTE.material.opacity = 0;
