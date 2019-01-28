@@ -827,9 +827,10 @@
 								
 							pivotKZ.position.x = earth.position.x;
 							pivotKZ.position.y = earth.position.y;
+							pivotKZ.position.z = earth.position.z +500;
 							
-							camera.lookAt( camera.position );
 							}
+						camera.lookAt( camera.position );
 					}
 					if(movieEr == 0)
 						eros.rotateZ(-2*Math.PI/180);
