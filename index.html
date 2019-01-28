@@ -120,7 +120,22 @@
 			}
 			
 			function ComeBack(){
-			
+				if(scene.getObjectByName('pivotKZ')){
+					scene.remove(pivotKZ);
+					console.log("remove earth camera");
+					zymeklis = 1;
+					//console.log("camera: "+camera.position.z);
+					//console.log("eros: "+eros.position.z);
+							
+				}
+				if(scene.getObjectByName('pivotK')){
+					scene.remove(pivotKZ);
+					console.log("remove eros camera");
+					zymeklis = 1;
+					//console.log("camera: "+camera.position.z);
+					//console.log("eros: "+eros.position.z);
+							
+				}
 				camera.position.z = 98000;
 				camera.position.x = 0;
 				camera.position.y = 0;
@@ -183,6 +198,7 @@
 				
 				pivotK = new THREE.Object3D();
 				scene.add(pivotK);
+				pivotK.name = 'pivotK';
 				pivotK.add(camera);
 				
 				pivotKZ = new THREE.Object3D();
@@ -812,8 +828,8 @@
 							scene.remove(pivotKZ);
 							console.log("remove earth camera");
 							zymeklis = 1;
-							console.log("camera: "+camera.position.z);
-							console.log("eros: "+eros.position.z);
+							//console.log("camera: "+camera.position.z);
+							//console.log("eros: "+eros.position.z);
 							
 						}
 						camera.position.x = eros.position.x;
