@@ -120,7 +120,7 @@
 			}
 			
 			function ComeBack(){
-				camera.up.set( 0, 1, 0 );
+				camera.up.set( 1, 0, 0 );
 				if(scene.getObjectByName('pivotKZ')){
 					scene.remove(pivotKZ);
 					console.log("remove earth camera");
@@ -804,7 +804,7 @@
 					if(movie == 1){
 						movieEr = 0
 						camera.position.x = earth.position.x;
-						camera.position.y = earth.position.y;
+						//camera.position.y = earth.position.y;
 						if (camera.position.z > earth.position.z + 550){
 							camera.position.z -= 50;
 							camera.position.x = earth.position.x;
@@ -825,7 +825,7 @@
 							distanceT.material.transparent = true;
 							camera.position.z = earth.position.z +500;
 							camera.position.x = earth.position.x;
-							camera.position.y = earth.position.y;
+							//camera.position.y = earth.position.y;
 								
 							pivotKZ.position.x = earth.position.x;
 							pivotKZ.position.y = earth.position.y;
