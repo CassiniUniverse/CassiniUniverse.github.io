@@ -726,13 +726,6 @@
 				stats.update();
 				requestAnimationFrame(render);
 				camera.up.set(0, 1, 0);
-				if(!scene.getObjectByName('edge')){
-					scene.add(edge);
-
-					}
-				if(!scene.getObjectByName('txt2')){
-					scene.add(txt2);
-								}
 				if((kampas == 359 || kampas > 359))
 					kampas = 0;
 				if((cameraKampas == 359 || cameraKampas > 359))
