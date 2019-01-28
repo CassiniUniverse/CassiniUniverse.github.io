@@ -812,6 +812,11 @@
 							distanceT.position.z = earth.position.z;
 							}
 							else {
+								if(!scene.getObjectByName('pivotKZ')){
+									scene.add(pivotKZ);
+									console.log("add earth camera");
+
+								}
 							distanceT.material.opacity = 0;
 							distanceT.material.transparent = true;
 							camera.position.z = earth.position.z +500;
@@ -842,6 +847,12 @@
 						transparentE1.material.transparent = true;
 						transparentE2.material.transparent = true;*/
 						if (camera.position.z > eros.position.z +250 && er == 0){
+							
+				if(!scene.getObjectByName('pivotK')){
+					scene.add(pivotKZ);
+					console.log("add eros camera");
+							
+				}
 							camera.position.z -= 100;
 							distanceTE.material.opacity = 0;
 							distanceTE.material.transparent = false;
