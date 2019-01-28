@@ -283,6 +283,7 @@
 				//transparentE1.material.transparent = true;
 				edges = new THREE.LineSegments( eGeometry , eMaterial );
 				scene.add( edges );
+				edges.name = 'edges';
 				//////////
 				
 				var geometryE = new THREE.BoxGeometry( 5000, 5000, 2500 );
@@ -314,6 +315,7 @@
 				//transparentE2.material.transparent = true;
 				edges2 = new THREE.LineSegments( eGeometry2 , eMaterial2 );
 				scene.add( edges2 );
+				edges2.name = 'edges2';
 				
 				var loader = new THREE.FontLoader();
 
@@ -326,6 +328,7 @@
 					var txt_mat = new THREE.MeshBasicMaterial({color:0x00ff000});
 					txt2 = new THREE.Mesh(geometry3, txt_mat);
 					scene.add(txt2);
+					txt2.name = 'txt2';
 				} );
 				
 				var loader4 = new THREE.FontLoader();
@@ -339,6 +342,7 @@
 					var txt_mat4 = new THREE.MeshBasicMaterial({color:0xC0C0C0});
 					txt1 = new THREE.Mesh(geometry4, txt_mat4);
 					scene.add(txt1);
+					txt1.name = 'txt1';
 				} );
 				
 				var loader = new THREE.FontLoader();
@@ -827,6 +831,16 @@
 									console.log("add earth camera");
 
 								}*/
+							if(!scene.getObjectByName('edge')){
+									scene.remove(egde);
+									console.log("remove egde camera");
+
+								}
+								if(!scene.getObjectByName('txt2')){
+									scene.remove(txt2);
+									console.log("remove txt2 camera");
+
+								}
 							distanceT.material.opacity = 0;
 							distanceT.material.transparent = true;
 							camera.position.z = earth.position.z +500;
