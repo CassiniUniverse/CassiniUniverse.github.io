@@ -22,9 +22,9 @@
 	<!--<input type="button" class="button" onclick="Main()" value="Main view" style="vertical-align:top; float: right" width="48" height="48">
 	<input type="button" class="button" onclick="Eros_Clicked()" value="Eros" style="vertical-align:top; float: right" width="48" height="48">
 	<input type="button" class="button" onclick="Earth_Clicked()" value="Earth" style="vertical-align:top; float: right" width="48" height="48">
-	<input type="button" class="button" onclick="Moon_Clicked()" value="Moon" style="vertical-align:top; float: right" width="48" height="48">
+	<input type="button" class="button" onclick="Moon_Clicked()" value="Moon" style="vertical-align:top; float: right" width="48" height="48">-->
 	<input type="button" class="button" onclick="ComeBack1()" value="Main view" style="vertical-align:top; float: right" width="48" height="48">
-	<input type="button" class="button" onclick="ComeBack()" value="Main view with animation" style="vertical-align:top; float: right" width="48" height="48">-->
+	<!--<input type="button" class="button" onclick="ComeBack()" value="Main view with animation" style="vertical-align:top; float: right" width="48" height="48">-->
 	<body>
 	<div id="WebGL-output">
 	<canvas width="1920" height="850" style="width: 0px; height: 0px;"></canvas></div>
@@ -255,7 +255,11 @@
 				var geometry = new THREE.BoxGeometry( 5000, 5000, 0 );//2/2/1
 				var eGeometry = new THREE.EdgesGeometry( geometry );
 				var eMaterial = new THREE.LineBasicMaterial( { color: 0x00ff000, linewidth: 5000 } );//4
-				edges = new THREE.LineSegments( eGeometry , eMaterial );
+				transparentE1 = new THREE.Mesh( geometry , eMaterial );
+				//transparentE.visible = false;
+				transparentE1.material.opacity = 100;
+				transparentE1.material.transparent = true;
+				edges = new THREE.LineSegments( eGeometry , transparentE1 );
 				scene.add( edges );
 				//////////
 				
@@ -282,7 +286,11 @@
 				var geometry2 = new THREE.BoxGeometry( 5000, 5000, 0);
 				var eGeometry2 = new THREE.EdgesGeometry( geometry2 );
 				var eMaterial2 = new THREE.LineBasicMaterial( { color: 0xC0C0C0, linewidth: 5000 } );
-				edges2 = new THREE.LineSegments( eGeometry2 , eMaterial2 );
+				transparentE2 = new THREE.Mesh( geometryE , eMaterial2 );
+				//transparentE.visible = false;
+				transparentE2.material.opacity = 100;
+				transparentE2.material.transparent = true;
+				edges2 = new THREE.LineSegments( eGeometry2 , transparentE2 );
 				scene.add( edges2 );
 				
 				var loader = new THREE.FontLoader();
@@ -811,6 +819,8 @@
 						camera.position.x = eros.position.x;
 						camera.position.y = earth.position.y;
 						eros.rotateZ(-2*Math.PI/180);
+						transparentE1.material.opacity = 0;
+						transparentE2.material.opacity = 0;
 						if (camera.position.z > eros.position.z +250 && er == 0){
 							camera.position.z -= 100;
 							distanceTE.material.opacity = 0;
