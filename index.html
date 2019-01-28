@@ -255,11 +255,11 @@
 				var geometry = new THREE.BoxGeometry( 5000, 5000, 0 );//2/2/1
 				var eGeometry = new THREE.EdgesGeometry( geometry );
 				var eMaterial = new THREE.LineBasicMaterial( { color: 0x00ff000, linewidth: 5000 } );//4
-				transparentE1 = new THREE.Mesh( geometry , eMaterial );
+				//transparentE1 = new THREE.Mesh( geometry , eMaterial );
 				//transparentE.visible = false;
 				//transparentE1.material.opacity = 100;
 				//transparentE1.material.transparent = true;
-				edges = new THREE.LineSegments( eGeometry , transparentE1 );
+				edges = new THREE.LineSegments( eGeometry , eMaterial );
 				scene.add( edges );
 				//////////
 				
@@ -286,11 +286,11 @@
 				var geometry2 = new THREE.BoxGeometry( 5000, 5000, 0);
 				var eGeometry2 = new THREE.EdgesGeometry( geometry2 );
 				var eMaterial2 = new THREE.LineBasicMaterial( { color: 0xC0C0C0, linewidth: 5000 } );
-				transparentE2 = new THREE.Mesh( geometryE , eMaterial2 );
+				//transparentE2 = new THREE.Mesh( geometryE , eMaterial2 );
 				//transparentE.visible = false;
 				//transparentE2.material.opacity = 100;
 				//transparentE2.material.transparent = true;
-				edges2 = new THREE.LineSegments( eGeometry2 , transparentE2 );
+				edges2 = new THREE.LineSegments( eGeometry2 , eMaterial2 );
 				scene.add( edges2 );
 				
 				var loader = new THREE.FontLoader();
