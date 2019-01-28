@@ -120,7 +120,8 @@
 			}
 			
 			function ComeBack(){
-				camera.up.set( 1, 0, 0 );
+				pivotK.position.x = 0;
+				pivotK.position.y = 0;
 				if(scene.getObjectByName('pivotKZ')){
 					scene.remove(pivotKZ);
 					console.log("remove earth camera");
@@ -808,8 +809,8 @@
 						camera.position.y = earth.position.y;
 						pivotK.position.x = 0;
 						pivotK.position.y = 0;
-						pivotKZ.position.x = 0;
-						pivotKZ.position.z = 0;
+						//pivotKZ.position.x = 0;
+						//pivotKZ.position.z = 0;
 						if (camera.position.z > earth.position.z + 550){
 							camera.position.z -= 50;
 							camera.position.x = earth.position.x;
@@ -842,8 +843,8 @@
 					if(movieEr == 0)
 						eros.rotateZ(-2*Math.PI/180);
 					if(movieEr == 1){
-						pivotKZ.position.x = 0;
-						pivotKZ.position.z = 0;
+						//pivotKZ.position.x = 0;
+						//pivotKZ.position.z = 0;
 						movie = 0;
 						zymeklis = 0;
 						if(scene.getObjectByName('pivotKZ')){
