@@ -709,7 +709,7 @@
 				scene.add( spotLight.target );
 				var rot = earth.rotateY(0.225*Math.PI / 180);
 				var rotX = earth.rotateX(0.1*Math.PI / 180);
-				eros.rotateZ(-2*Math.PI/180);
+				
 				earth.position.x = 60000 * Math.cos(kampas);
 				var positionX = earth.position.x;
 				
@@ -795,6 +795,8 @@
 							camera.lookAt( camera.position );
 							}
 					}
+					if(movieEr == 0)
+						eros.rotateZ(-2*Math.PI/180);
 					if(movieEr == 1){
 						movie = 0;
 						zymeklis = 0;
@@ -804,9 +806,11 @@
 							zymeklis = 1;
 							console.log("camera: "+camera.position.z);
 							console.log("eros: "+eros.position.z);
+							
 						}
 						camera.position.x = eros.position.x;
 						camera.position.y = earth.position.y;
+						eros.rotateZ(-2*Math.PI/180);
 						if (camera.position.z > eros.position.z +250 && er == 0){
 							camera.position.z -= 100;
 							distanceTE.material.opacity = 0;
