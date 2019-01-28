@@ -802,9 +802,10 @@
 				}
 
 					if(movie == 1){
-						movieEr = 0
+						movieEr = 0;
+						camera.up.set(1, 0, 0);
 						camera.position.x = earth.position.x;
-						//camera.position.y = earth.position.y;
+						camera.position.y = earth.position.y;
 						if (camera.position.z > earth.position.z + 550){
 							camera.position.z -= 50;
 							camera.position.x = earth.position.x;
@@ -815,7 +816,7 @@
 							distanceT.position.y = earth.position.y+2000;
 							distanceT.position.z = earth.position.z;
 							}
-							else {
+							else {camera.up.set(1, 0, 0);
 								/*if(!scene.getObjectByName('pivotKZ')){
 									scene.add(pivotKZ);
 									console.log("add earth camera");
@@ -825,7 +826,7 @@
 							distanceT.material.transparent = true;
 							camera.position.z = earth.position.z +500;
 							camera.position.x = earth.position.x;
-							//camera.position.y = earth.position.y;
+							camera.position.y = earth.position.y;
 								
 							pivotKZ.position.x = earth.position.x;
 							pivotKZ.position.y = earth.position.y;
