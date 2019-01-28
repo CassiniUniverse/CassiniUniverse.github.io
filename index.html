@@ -814,20 +814,20 @@
 							distanceT.position.z = earth.position.z;
 							}
 							else {
-								if(!scene.getObjectByName('pivotKZ')){
+								/*if(!scene.getObjectByName('pivotKZ')){
 									scene.add(pivotKZ);
 									console.log("add earth camera");
 
-								}
+								}*/
 							distanceT.material.opacity = 0;
 							distanceT.material.transparent = true;
 							camera.position.z = earth.position.z +500;
 							camera.position.x = earth.position.x;
 							camera.position.y = earth.position.y;
 								
-							pivotKZ.position.x = earth.position.x;
+							/*pivotKZ.position.x = earth.position.x;
 							pivotKZ.position.y = earth.position.y;
-							pivotKZ.position.z = earth.position.z +500;
+							pivotKZ.position.z = earth.position.z +500;*/
 							
 							}
 						camera.lookAt( camera.position );
