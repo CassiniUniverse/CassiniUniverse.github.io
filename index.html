@@ -857,22 +857,22 @@
 					if(movieEr == 0)
 						eros.rotateZ(-2*Math.PI/180);
 					if(movieEr == 1){
-						if(!scene.getObjectByName('edges2')){
+						/*if(!scene.getObjectByName('edges2')){
 									Tracking();
 
-								}
+								}*/
 						//pivotKZ.position.x = 0;
 						//pivotKZ.position.z = 0;
 						movie = 0;
 						zymeklis = 0;
-						if(scene.getObjectByName('pivotKZ')){
+						/*if(scene.getObjectByName('pivotKZ')){
 							scene.remove(pivotKZ);
 							console.log("remove earth camera");
 							zymeklis = 1;
 							//console.log("camera: "+camera.position.z);
 							//console.log("eros: "+eros.position.z);
 							
-						}
+						}*/
 						camera.position.x = eros.position.x;
 						camera.position.y = eros.position.y;
 						eros.rotateZ(-2*Math.PI/180);
