@@ -24,7 +24,7 @@ newmtl 02___Default
 	d 1.0000
 	Tr 0.0000
 	Tf 1.0000 1.0000 1.0000 
-	mm base gain
+	-mm base gain
 	illum 2
 	Ka 0.5882 0.5882 0.5882
 	Kd 0.5882 0.5882 0.5882
