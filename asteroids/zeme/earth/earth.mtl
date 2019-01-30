@@ -20,7 +20,7 @@ newmtl 01___Default
 
 newmtl 02___Default
 	Ns 10.0000
-	Ni 1.5000
+	Ni 10.5000
 	d 1.0000
 	Tr 0.0000
 	Tf 1.0000 1.0000 1.0000 
